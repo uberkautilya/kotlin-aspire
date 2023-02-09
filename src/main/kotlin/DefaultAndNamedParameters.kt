@@ -3,7 +3,7 @@ package main.kotlin
 fun main() {
     printBorder('*', 10)
     printBorder('(')
-    // When overriding the arguments in another order, use name of the parameters
+    // Named Parameters: When overriding the arguments in another order, use name of the parameters
     printBorder(length = 20)
 }
 
