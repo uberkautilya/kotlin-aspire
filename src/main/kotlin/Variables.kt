@@ -46,4 +46,13 @@ fun main(args: Array<String>) {
     println(name1.replace("A", "S"))
     val replace = name1.replace("A", "S")
 
+    var nullableVal: String?
+    nullableVal = "A nullable String val"
+    nullableVal = null
+    println(nullableVal.equals(null))
+    /*This would cause a NullPointerException because not null assertion with !! asserts that the value is not null
+    println(nullableVal!!.equals(null))*/
+
+
+
 }
