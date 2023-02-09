@@ -20,25 +20,30 @@ fun main(args: Array<String>) {
     topLevelVariable = "Updated"
     println("topLevelVariable = ${topLevelVariable}")
 
-    /*
-    Types are non null by default in Kotlin
-    To make a String variable nullable, need to add a '?'
-     */
-    var greeting: String? = null
-    greeting = "Not Null now"
-    println("greeting = ${greeting}")
 
-    /*
-    Type inference is supported
-     */
+    /*Types are non null by default in Kotlin
+    To make a String variable nullable, need to add a '?'*/
+
+    var greeting: String? = null
+//    greeting = "Not Null now"
+//    println("greeting = ${greeting}")
+    println(greeting.toString())
+
+
+    /*Type inference is supported*/
+
     var str = "A string variable, inferred"
     println("str = ${str}")
 
-    /*
-    Implicit 'Nothing' type, when a variable is assigned null
-    The type needs to be specified, as the type cannot be inferred
-     */
+
+    /*Implicit 'Nothing' type, when a variable is assigned null
+    The type needs to be specified, as the type cannot be inferred*/
+
     var nothingType = null
     var typeInferredNull: String? = null
+
+    val name1 = "Aspire, New"
+    println(name1.replace("A", "S"))
+    val replace = name1.replace("A", "S")
 
 }
