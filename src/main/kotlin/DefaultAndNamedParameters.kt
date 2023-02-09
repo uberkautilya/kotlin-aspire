@@ -5,6 +5,12 @@ fun main() {
     printBorder('(')
     // Named Parameters: When overriding the arguments in another order, use name of the parameters
     printBorder(length = 20)
+    var st: Student = Student(101L, "Name101")
+    printStudent(student = st)
+}
+
+fun printStudent(student: Student) {
+    print(student)
 }
 
 /**
@@ -16,4 +22,17 @@ fun printBorder(char: Char = '=', length: Int = 10) {
         print("$char ")
     }
     println()
+}
+class Student {
+    var id: Long = 0L
+    var name: String = "Name"
+
+    constructor(id: Long, name: String) {
+        this.id = id
+        this.name = name
+    }
+    override fun toString(): String {
+        return "Student(id=$id, name='$name')"
+    }
+
 }

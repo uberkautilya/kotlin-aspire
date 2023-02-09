@@ -3,7 +3,6 @@ package main.kotlin
 fun main() {
     var anyVal: Any? = anySample()
     anyVal = null
-
 }
 
 private fun anySample(): Any? {
