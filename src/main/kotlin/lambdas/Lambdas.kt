@@ -23,4 +23,19 @@ fun main() {
         c = 3,
         aFun = { num1: Int, num2: Int, num3: Int -> num1 + num2 + num3 }
     )
+
+    //The below works with listOf as well
+    var interestingThings = arrayOf("Kotlin", "Programming", "Comic Books")
+    //it is the default lambda receiver object
+    interestingThings.forEach { println(it)}
+    interestingThings.forEachIndexed{index, it -> println("Thing at index $index is $it")}
+
+    val map = mapOf<Int, String>(1 to "14L", 2 to "18L")
+    map.forEach{ (k, v) -> println("$k : $v")}
+}
+
+private fun methodsOnArray(interestingThings: Array<String>) {
+    println(interestingThings.size)
+    println(interestingThings[0])
+    println(interestingThings.get(0))
 }
