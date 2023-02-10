@@ -1,7 +1,7 @@
 package main.kotlin.userdefined
 
 fun main() {
-    var animal: Animal = Animal ("Animal")
+    var animal: Animal = Animal("Animal")
     var lion = Lion()
 
     printAnimal(animal2=lion, animal1 = animal)
