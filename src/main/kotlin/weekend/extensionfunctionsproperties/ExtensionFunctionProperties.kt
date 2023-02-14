@@ -19,7 +19,7 @@ val Entity.Hard.info: String
 
 fun main() {
     Entity.Hard("101", "name", 1.23F).printInfo()
-    val entity = EntityFactory.create(EntityType.HARD)
+    val entity: Entity = EntityFactory.create(EntityType.HARD)
     if (entity is Entity.Hard) {
         /*
          * Within this if context, compiler makes available all methods defined on Entity.Hard
@@ -29,3 +29,5 @@ fun main() {
         println("Extension Property on Entity.Hard: ${entity.info}")
     }
 }
+
+//private Integer obj = (Integer) obj2;

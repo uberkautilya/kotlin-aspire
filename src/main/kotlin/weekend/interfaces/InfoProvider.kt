@@ -12,6 +12,10 @@ interface InfoProvider {
         println("basicInfoProvider")
         human4.printInfo()
     }
+    /*
+    Initializing values is not allowed
+    val name: String
+    */
 }
 
 /**
