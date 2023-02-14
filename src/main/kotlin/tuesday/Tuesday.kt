@@ -25,7 +25,9 @@ fun main() {
 //    whenStatement(3)
 //    demoRange()
 //    demoDownTo()
-    demoStep()
+//    demoStep()
+//    demoUntilFunction()
+    demoUnSafeCast()
 }
 
 fun returnWithIf(dept: String): Boolean {
@@ -149,6 +151,13 @@ fun demoRange() {
     for (x in 1.rangeTo(11)) {
         println("x: ${x}")
     }
+    val range = (12..23)
+    println("range.min(): ${range.min()}")
+    println("range.sum(): ${range.sum()}")
+    println("range.average(): ${range.average()}")
+
+    //This is possible only if Product classs implements Comparable
+    val prodRange = Product(101, "Product", 11.0)..Product(111, "Product", 11.0)
 }
 
 fun demoDownTo() {
@@ -160,6 +169,7 @@ fun demoDownTo() {
     }*/
 }
 
+//Default value of step is 1
 fun demoStep() {
     for (i in 11..21 step 3) {
         println("i: $i")
@@ -167,4 +177,18 @@ fun demoStep() {
     for (num in 14.downTo(5).step(5)) {
         println("num: $num")
     }
+}
+
+//until gives the range excluding the upper limit
+fun demoUntilFunction() {
+    for (i in 1 until 10) {
+        println("i: ${i}")
+    }
+}
+
+fun demoUnSafeCast() {
+    val product = Product(101L, "Prod101", 100.00)
+    //Will throw an exception as the object product is not an instance of String
+    val prodString = product as String
+    println("prodString: ${prodString}")
 }
