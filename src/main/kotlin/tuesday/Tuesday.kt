@@ -187,8 +187,14 @@ fun demoUntilFunction() {
 }
 
 fun demoUnSafeCast() {
+    var x: String? = "String.."
+    //as? resolves to null when the cast cannot be performed
+    val y = x as? String
+    x = "Text.."
+    println("y: $y")
+
     val product = Product(101L, "Prod101", 100.00)
     //Will throw an exception as the object product is not an instance of String
     val prodString = product as String
-    println("prodString: ${prodString}")
+    println("prodString: $prodString")
 }
