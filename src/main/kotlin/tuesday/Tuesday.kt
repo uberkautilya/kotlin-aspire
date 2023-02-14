@@ -63,7 +63,7 @@ fun elvisOperator(str: String?): Int {
 
 fun itKeyword(listOfStrings: List<String>): Unit {
     println("listOfStrings: $listOfStrings")
-    //it represents the receiver of the lambda
+    //it represents the argument of the lambda
     listOfStrings.forEach { println(it) }
 }
 
@@ -79,6 +79,9 @@ fun letFunction(): Product {
     val prod2 = Product(102L, "Roller", 2000.00).let {
         println(it.discountPrice(0.15))
         println("${it.name}: ${it.getPrice()}")
+        if (it.name == "Roller") {
+            it.name = "Not a roller"
+        }
         it
     }
     return prod2
@@ -190,5 +193,5 @@ fun demoUnSafeCast() {
     val product = Product(101L, "Prod101", 100.00)
     //Will throw an exception as the object product is not an instance of String
     val prodString = product as String
-    println("prodString: ${prodString}")
+    println("prodString: $prodString")
 }

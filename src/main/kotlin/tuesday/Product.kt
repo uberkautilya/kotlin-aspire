@@ -14,4 +14,14 @@ data class Product(val id: Long, var name: String, private var price: Double): C
     override fun compareTo(other: Product): Int {
         TODO("Not yet implemented")
     }
+
+    override fun hashCode(): Int {
+        return super.hashCode()
+    }
+    override fun equals(other: Any?): Boolean {
+        return super.equals(other)
+    }
+    override fun toString(): String {
+        return "Product: id:$id, name:$name, price:$price"
+    }
 }
