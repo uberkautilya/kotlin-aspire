@@ -16,12 +16,18 @@ package main.kotlin.wednesday
  */
 
 fun main() {
-//    userDefinedTypeInMutableList()
-//    userDefinedTypeInMap()
-//    sortInMap()
-//    userDefinedFunctionCalledWithArgumentIt()
-//    conversionBetweenEntityAndDTO()
+    userDefinedTypeInMutableList()
+    userDefinedTypeInMap()
+    userDefinedTypeInSet()
+    sortInMap()
+    userDefinedFunctionCalledWithArgumentIt()
+    conversionBetweenEntityAndDTO()
     exceptionHandling()
+}
+
+fun userDefinedTypeInSet() {
+//    val setVal = setOf(
+
 }
 
 fun exceptionHandling() {
