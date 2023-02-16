@@ -1,4 +1,4 @@
-package main.kotlin.thursday.exceptions
+package main.kotlin.thursday
 
 /**
  * 1 . Can we override custom exception classes in Kotlin
