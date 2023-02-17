@@ -3,6 +3,7 @@ package main.kotlin.thursday
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import main.kotlin.thursday.exceptions.*
+import java.util.*
 
 /**
  * 1. Can we override custom exception classes in Kotlin
@@ -21,7 +22,29 @@ fun main() {
     objectMapperMap()
     objectMapperList()
     extendingCustomException()
+    addToTreeSet()
 }
+
+fun addToTreeSet() {
+    val treeSet = TreeSet<Game>()
+    treeSet.add(Game("Game101", "Genre101", 100.00))
+    treeSet.add(Game("Game102", "Genre102", 1099.00))
+    treeSet.add(Game("Game103", "Genre103", 1011.00))
+
+    println(treeSet)
+}
+
+/*fun sortMapCustomType() {
+    val map = mapOf<Game, Double>(
+        Game("COD", "FirstPersonShooter", 100.00) to 1.00,
+        Game("AOE", "Strategy", 200.00) to 2.00,
+        Game("Contra", "Action", 299.00) to 3.00
+    )
+    val treeMap = TreeMap<Game, Long>(
+        Game("COD", "FirstPersonShooter", 100.00) to 1.00,
+        Game("AOE", "Strategy", 200.00) to 2.00,
+        Game("Contra", "Action", 299.00) to 3.00)
+}*/
 
 /**
  * Direct subclasses of sealed classes and interfaces must be declared in the same package.
