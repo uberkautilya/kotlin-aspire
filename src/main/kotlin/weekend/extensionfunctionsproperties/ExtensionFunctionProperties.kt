@@ -5,8 +5,7 @@ import main.kotlin.weekend.dataclasses.EntityType
 import main.kotlin.weekend.dataclasses.Entity
 
 /**
- * Extension functions and properties allow
- * addition of new functions and properties on existing class
+ * Extension functions and properties allow addition of new functions and properties on existing class
  * It can also be used to customize the behavior of classes which you can't control
  * New API around an existing class
  */

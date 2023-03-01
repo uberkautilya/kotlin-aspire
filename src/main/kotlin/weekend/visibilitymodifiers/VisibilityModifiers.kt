@@ -1,7 +1,7 @@
 package main.kotlin.weekend.visibilitymodifiers
 
 /**
- * Classes, methods and properties: In short visibility in general are public by default
+ * Classes, methods and properties: In short, visibility in general is public by default
  * Visibility Modifiers in Kotlin:
  * 1. Public: Default modifier - accessible everywhere
  * 2. Private: Access limited to the file of declaration
