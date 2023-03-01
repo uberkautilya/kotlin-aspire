@@ -12,19 +12,25 @@ fun updateCounter() {
 }
 
 fun main() = runBlocking {
-    val scope =
-        CoroutineScope(newFixedThreadPoolContext(4, "synchronizationPool")) // We want our code to run on 4 threads
+    val scope = CoroutineScope(
+        newFixedThreadPoolContext(4, "synchronizationPool")
+    ) // We want our code to run on 4 threads
+
     scope.launch {
-        val coroutines = 1.rangeTo(1000).map { //create 1000 coroutines (light-weight threads).
+        //Create 1000 coroutines (light-weight threads).
+        val coroutines = 1.rangeTo(1000).map {
             launch {
-                for (i in 1..1000) { // and in each of them, increment the sharedCounter 1000 times.
-                    updateCounter() // call the newly created function that is now synchronized
+                // and in each of them, increment the sharedCounter 1000 times.
+                for (i in 1..1000) {
+                    // Call the newly created function that is now synchronized
+                    updateCounter()
                 }
             }
         }
 
         coroutines.forEach { coroutine ->
-            coroutine.join() // wait for all coroutines to finish their jobs.
+            // wait for all coroutines to finish their jobs.
+            coroutine.join()
         }
     }.join()
 
