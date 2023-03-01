@@ -12,7 +12,7 @@ fun main() {
 private fun elvisOperator(text: String?) {
     //var text1 = text needs to be done if value is to be reassigned
 
-    //textAnother will get text's value if not null, else 'Value when null
+    //textAnother will get text's value if not null, else 'Value when null, with elvis operator'
     var textAnother = text ?: "Value when null, with elvis operator"
     println("textAnother: $textAnother")
 }
