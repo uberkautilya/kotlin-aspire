@@ -149,10 +149,10 @@ fun whenStatement(int: Int): String {
  */
 fun demoRange() {
     for (i in 'a'..'f') {
-        println("i: ${i}")
+        println("i: $i")
     }
     for (x in 1.rangeTo(11)) {
-        println("x: ${x}")
+        println("x: $x")
     }
     val range = (12..23)
     println("range.min(): ${range.min()}")
