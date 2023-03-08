@@ -8,18 +8,28 @@ fun main() {
     println(numberMap.mapValues {
         it.key.length
     })
-    println(numberMap.map {
-        it.key.lowercase() to it.value * 10
-    })
-    println(numberMap
-
-
+    val mappedMap = numberMap.mapValues {
+        "(${it.value}: ${it.key.uppercase()})"
+    }
+    println("mapValues: $mappedMap")
+    println(
+        "Entries: ${
+            numberMap.map {
+                it.key.lowercase() to it.value * 10
+            }
+        }"
+    )
 }
 
 private fun mapTransformation(numberSet: Set<Int>) {
     //Does not change the original values in the set
     println(numberSet.map { it * 10 })
     println(numberSet)
+
+    val mapIndexedNotNull = numberSet.mapIndexedNotNull { index: Int, i: Int ->
+        if (index == 0) null else index * i
+    }
+    println("mapIndexedNotNull: $mapIndexedNotNull")
 
     println(numberSet.map { if (it == 3) it * 100 else it * 10 })
 }
