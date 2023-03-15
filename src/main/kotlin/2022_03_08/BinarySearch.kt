@@ -1,28 +1,36 @@
 package main.kotlin.`2022_03_08`
 
 fun main() {
+    val numList = (1..30).toMutableList()
     println(
-//        linearSearch(27, (1..30).toMutableList())
-        binarySearch(27, (1..30).toMutableList())
+        linearSearch(27, numList)
     )
+    println(
+        binarySearch(27, numList)
+    )
+
+    //The functionality is provided by the Collection API, leveraged as below
+    val indexOf27 = numList.binarySearch(27)
+    println("\nindexOf27: $indexOf27")
+
 }
 
 /**
  * Binary search requires the argument list to be pre-sorted
  */
 fun binarySearch(el: Int, numList: MutableList<Int>): Int {
-    var lIndex = 0
-    var hIndex = numList.size - 1
+    var lowI = 0
+    var highI = numList.size - 1
 
     var iCount = 0
-    while (lIndex <= hIndex) {
+    while (lowI <= highI) {
         println("Count ${++iCount}")
-        val mid = (lIndex + hIndex) / 2
+        val mid = (lowI + highI) / 2
         val comp = numList[mid].compareTo(el)
         if (comp < 0) {
-            lIndex = mid + 1
+            lowI = mid + 1
         } else if (comp > 0) {
-            hIndex = mid - 1
+            highI = mid - 1
         } else return numList[mid]
     }
     return -1
