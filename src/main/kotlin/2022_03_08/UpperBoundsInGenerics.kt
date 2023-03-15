@@ -35,7 +35,7 @@ fun main() {
 }
 
 /**
- * Upper bound: T has to have inherited from the GPlayer class
+ * Upper bound: T has to have properties inherited from the GPlayer class
  */
 class GTeam<T : GPlayer>(val name: String, val genericList: MutableList<T>) {
     fun addPlayer(genericObj: T) {
@@ -55,6 +55,10 @@ open class GPlayer(
 
 class FBPlayer(name: String) : GPlayer(name)
 class BBPlayer(name: String) : GPlayer(name)
+
+/**
+ * Cannot create a GTeam instance of type PCPlayer, as it does not inherit from GPlayer
+ */
 class PCPlayer(name: String)
 
 
