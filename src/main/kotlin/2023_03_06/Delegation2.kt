@@ -10,8 +10,8 @@ fun main() {
         lastName = "Vinci"
     }
     with(user) {
-        println("firstName: ${firstName}")
-        println("lastName: ${lastName}")
+        println("firstName: $firstName")
+        println("lastName: $lastName")
     }
 }
 

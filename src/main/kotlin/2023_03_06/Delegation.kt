@@ -3,7 +3,7 @@ package `2023_03_06`
 /**
  * Delegation: Giving power from one class to another
  * You can inherit from only one class
- * With delegation, multiple behavior can be brought in
+ * With delegation, multiple behavior can be brought in from separate classes
  * A by FirstDelegate directs to inherit A as per implementation provided by FirstDelegate
  */
 
